@@ -29,7 +29,7 @@ export default function ProductPage() {
     <img
       src={product.img}
       alt={product.name}
-      className="w-full h-full object-cover rounded-2xl shadow-md"
+      className="w-full h-full object-cover rounded-2xl shadow-6md"
     />
 
     {/* Cart Icon */}
@@ -58,12 +58,12 @@ export default function ProductPage() {
 
       {/* Size */}
       <div className="mb-4">
-        <h3 className="font-bold text-gray-800 mb-2 text-4xl mt-4">Size</h3>
+        <h3 className="font-bold text-gray-800 mb-2 text-3xl mt-4">Size</h3>
         <div className="flex gap-6 flex-wrap">
           {product.sizes.map((size, i) => (
             <div
               key={i}
-              className="px-3 py-1 rounded-md text-gray-700 text-3xl"
+              className="px-3 py-1 rounded-md text-gray-700 text-2xl"
             >
               {size}
             </div>

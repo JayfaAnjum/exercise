@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function CheckoutPage() {
   return (
-    <div className="min-h-screen bg-[#F5F5F5] flex justify-center py-6">
-      <div className="w-[390px] bg-white rounded-3xl px-5 py-6 shadow-sm">
+    <div className="min-h-screen bg-white flex justify-center py-6">
+      <div className="w-[390px] bg-white rounded-3xl px-5 py-6 ">
 
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
