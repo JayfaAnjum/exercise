@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
+
+import { useRouter } from "next/navigation";
 
 interface OrderItem {
   id: number;
@@ -14,6 +15,8 @@ interface OrderItem {
 }
 
 export default function MyOrdersPage() {
+
+      const router = useRouter();
   const [orders, setOrders] = useState<OrderItem[]>([]);
 
   // Fetch orders
@@ -160,7 +163,9 @@ export default function MyOrdersPage() {
         </div>
 
         {/* Checkout Button */}
-        <button className="w-full mt-6 bg-[#F28C28] text-white py-4 rounded-full font-medium text-lg">
+        <button className="w-full mt-6 bg-[#F28C28] text-white py-4 rounded-full font-medium text-lg"  onClick={()=>{
+    router.push(`/payment`)
+  }}>
           Checkout Now
         </button>
       </div>

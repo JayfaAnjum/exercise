@@ -1,9 +1,12 @@
-// src/components/HeroSection.tsx
-import React from "react";
-import Image from "next/image";
+"use client";
+import { useRouter } from "next/navigation";
+
 
 
 const HeroSection = () => {
+
+   const router = useRouter();
+  
   return (
     <section className="w-full min-h-screen sm:flex sm:justify-between sm:items-center sm:p-12 p-0">
   {/* Hero Image */}
@@ -29,10 +32,19 @@ const HeroSection = () => {
   <div className="flex flex-row gap-4 w-full sm:w-auto">
  <div className="flex flex-row gap-4 w-full sm:w-auto">
   
-  <button className="bg-white text-black text-lg  border border-black px-8 py-4 rounded-full shadow-md hover:bg-blue-50 hover:scale-105 transition transform w-full sm:w-auto">
+  <button className="bg-white text-black text-lg  border border-black px-8 py-4 rounded-full shadow-md hover:bg-blue-50 hover:scale-105 transition transform w-full sm:w-auto"
+  onClick={()=>{
+    router.push(`/product`)
+  }}
+  >
     Sign Up
   </button>
-  <button className="bg-orange-600 text-lg  text-white px-8 py-4 rounded-full shadow-md hover:bg-blue-700 hover:scale-105 transition transform w-full sm:w-auto">
+  <button className="bg-orange-600 text-lg  text-white px-8 py-4 rounded-full shadow-md hover:bg-blue-700 hover:scale-105 transition transform w-full sm:w-auto"
+  
+  onClick={()=>{
+    router.push(`/product`)
+  }}
+  >
     Sign in
   </button>
 </div>

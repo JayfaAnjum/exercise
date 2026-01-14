@@ -21,7 +21,7 @@ export default function ProductPage() {
   useEffect(() => {
     if (!productId) return;
 
-    fetch(`/api/product/${productId}`)
+    fetch(`/api/products/${productId}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -49,7 +49,7 @@ export default function ProductPage() {
     );
   }
 
-  // Hardcoded colors and sizes for demo (you can later extend API to return these)
+  
   const colors = ["#000000", "#FF0000", "#00FF00"];
   const sizes = ["S", "M", "L", "XL", "XXL"];
 
@@ -64,7 +64,7 @@ export default function ProductPage() {
         </button>
       </div>
 
-      {/* Product Image */}
+   
       <div className="w-full flex justify-center mb-4 relative">
         <div className="w-90 h-100 sm:w-96 sm:h-96 relative">
           <img
@@ -75,7 +75,7 @@ export default function ProductPage() {
         </div>
       </div>
 
-      {/* Product Name & Colors */}
+      
       <div className="flex items-center justify-between mb-4 mt-4">
         <h2 className="text-black text-4xl font-semibold text-left">
           {product.name}
@@ -92,7 +92,7 @@ export default function ProductPage() {
         </div>
       </div>
 
-      {/* Size */}
+      
       <div className="mb-4">
         <h3 className="font-bold text-gray-800 mb-2 text-3xl mt-4">Size</h3>
         <div className="flex gap-6 flex-wrap">
@@ -104,7 +104,7 @@ export default function ProductPage() {
         </div>
       </div>
 
-      {/* Price & Add to Cart */}
+     
       <div className="mt-6 flex items-center justify-between mb-4">
         <p className="text-5xl font-bold text-black">${product.price}</p>
         <button className="bg-orange-600 text-white px-12 py-5 rounded-4xl text-2xl hover:bg-blue-700">

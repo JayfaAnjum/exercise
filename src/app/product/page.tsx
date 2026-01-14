@@ -55,7 +55,7 @@ const ExplorePage = () => {
         </div>
         <div className="flex flex-col items-center">
           <div className="w-6 h-6 bg-white border-2 border-black rounded-full mb-1"></div>
-          <div className="w-full h-px bg-gray-700"></div>
+        
         </div>
       </header>
 
@@ -66,7 +66,7 @@ const ExplorePage = () => {
       </div>
 
       {/* Category Tabs */}
-      <div className="px-4 mb-4 overflow-x-auto">
+      <div className="px-4 mb-4 overflow-x-auto scrollbar-hide">
         <div className="flex gap-4">
           {categories.map((cat) => (
             <button
@@ -83,13 +83,13 @@ const ExplorePage = () => {
       </div>
 
       {/* Products Grid */}
-      <div className="px-4 h-[500px] overflow-y-auto w-full" >
+      <div className="px-4 h-[500px] overflow-y-auto w-full mt-5" >
         <div className="columns-2 gap-4">
           {filteredProducts.length === 0 ? (
             <p>Loading products...</p>
           ) : (
             filteredProducts.map((p) => (
-              <div key={p.id || p.name} className="relative break-inside-avoid mb-4" onClick={() => router.push(`/products/${p.id}`)}>
+              <div key={p.id || p.name} className="relative break-inside-avoid mb-4" onClick={() => router.push(`/product/${p.id}`)}>
                 {/* Product Image */}
                 <img
                   src={p.img || "/product.png"}
@@ -99,15 +99,29 @@ const ExplorePage = () => {
 
                 {/* Cart Icon */}
                 <button
-                  className="bg-white absolute bottom-8 right-2 w-10 h-10 rounded-full"
-                  onClick={() => handleAddToCart(p)}
-                >
-                  <img
-                    src="/cart.png"
-                    alt="Add to cart"
-                    className="w-full h-full object-contain"
-                  />
-                </button>
+  className="bg-white absolute bottom-8 right-2 w-10 h-10 rounded-full flex items-center justify-center shadow-md"
+  onClick={(e) => {
+    e.stopPropagation(); // Prevent parent click
+    handleAddToCart(p); // Add to cart logic
+  }}
+>
+  {/* Cart SVG */}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-6 h-6 text-black"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9h14l-2-9M10 21a1 1 0 102 0 1 1 0 00-2 0z"
+    />
+  </svg>
+</button>
+
 
                 {/* Product Info */}
                 <div className="mt-2 text-left">

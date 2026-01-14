@@ -1,8 +1,12 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: [
+      'upload.wikimedia.org', // <-- add this
+      // you can add more domains here
+    ],
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
