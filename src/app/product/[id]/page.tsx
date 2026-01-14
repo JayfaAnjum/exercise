@@ -57,10 +57,10 @@ export default function ProductPage() {
     <div className="min-h-screen bg-white px-4 pt-4 flex flex-col">
       {/* Top Bar */}
       <div className="flex items-center justify-between mb-4 mt-8">
-        <button className="text-gray-700 font-bold text-3xl">{`<`}</button>
-        <h1 className="text-xl font-semibold">Details</h1>
+        
+        <h1 className="text-2xl">Details</h1>
         <button>
-          <img src="/flag.png" alt="Flag" className="w-6 h-6" />
+          
         </button>
       </div>
 

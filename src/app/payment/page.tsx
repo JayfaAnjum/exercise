@@ -31,13 +31,13 @@ export default function CheckoutPage() {
 
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <button className="text-xl font-medium">←</button>
+         
           <h1 className="text-xl font-semibold">Checkout</h1>
         </div>
 
         {/* Delivery Address */}
         <div className="mb-6">
-          <p className="text-sm text-gray-500 mb-2">Delivery Address</p>
+          <p className="text-lg text-gray-500 mb-2">Delivery Address</p>
           <div className="flex justify-between items-start">
             <div className="flex gap-3">
               <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
@@ -88,7 +88,7 @@ export default function CheckoutPage() {
 
         {/* Payment Method */}
         <div className="mb-6">
-          <p className="text-sm text-gray-500 mb-3">Payment Method</p>
+          <p className="text-lg text-gray-500 mb-3">Payment Method</p>
           <div className="flex items-center gap-4">
             <div className="px-4 py-2 rounded-xl flex items-center justify-center w-20 h-12 ">
               <Image
