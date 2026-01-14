@@ -1,6 +1,6 @@
 // src/app/api/products/[id]/route.ts
-import { NextResponse } from "next/server";
-import { products } from "../route"; // Import the array from your main products route
+import { NextRequest, NextResponse } from "next/server";
+import { products } from "../route"; // Import the main products array
 
 interface Product {
   id: number;
@@ -11,10 +11,12 @@ interface Product {
 }
 
 export async function GET(
-  req: Request,
-  { params }: { params: { id: string } }
+  req: NextRequest,
+  context: { params: Promise<{ id: string }> } // params is now a Promise
 ) {
-  const id = parseInt(params.id, 10);
+  const { params } = context;
+  const resolvedParams = await params; // resolve the promise
+  const id = parseInt(resolvedParams.id, 10);
 
   if (isNaN(id)) {
     return NextResponse.json({ message: "Invalid product ID" }, { status: 400 });

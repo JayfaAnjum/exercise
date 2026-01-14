@@ -83,13 +83,13 @@ const ExplorePage = () => {
       </div>
 
       {/* Products Grid */}
-      <div className="px-4 h-[500px] overflow-y-auto w-full">
+      <div className="px-4 h-[500px] overflow-y-auto w-full" >
         <div className="columns-2 gap-4">
           {filteredProducts.length === 0 ? (
             <p>Loading products...</p>
           ) : (
             filteredProducts.map((p) => (
-              <div key={p.id || p.name} className="relative break-inside-avoid mb-4">
+              <div key={p.id || p.name} className="relative break-inside-avoid mb-4" onClick={() => router.push(`/products/${p.id}`)}>
                 {/* Product Image */}
                 <img
                   src={p.img || "/product.png"}
