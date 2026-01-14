@@ -2,7 +2,8 @@
 @import "tailwindcss";
 
 body {
-  font-family: var(--font-roboto-condensed), sans-serif; /* use variable from RootLayout */
+ font-family: var(--font-imprima), sans-serif;
+/* use variable from RootLayout */
   background:white;
   margin: 0;
   padding: 0;

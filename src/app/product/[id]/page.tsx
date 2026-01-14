@@ -63,7 +63,7 @@ export default function ProductPage() {
           {product.sizes.map((size, i) => (
             <div
               key={i}
-              className="px-3 py-1 rounded-md text-gray-700 text-4xl"
+              className="px-3 py-1 rounded-md text-gray-700 text-3xl"
             >
               {size}
             </div>

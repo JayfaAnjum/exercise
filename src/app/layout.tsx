@@ -4,7 +4,7 @@ import "./globals.css";
 const robotoCondensed = Roboto_Condensed({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-roboto-condensed",
+  variable: "--font-imprima",
   display: "swap",
 });
 

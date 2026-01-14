@@ -17,7 +17,7 @@ const HeroSection = () => {
 
   {/* Text & Buttons */}
  <div className="flex flex-col sm:items-start sm:w-1/2 px-8 py-5 sm:px-3 mt-9 sm:mt-0">
-  <h1 className="text-5xl sm:text-5xl font-bold mb-2 text-left">
+  <h1 className="text-4xl sm:text-5xl font-bold mb-2 text-left">
     Find The<br className="block sm:hidden" />
     Best Collections
   </h1>
